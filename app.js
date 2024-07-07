@@ -103,9 +103,7 @@ app.use("/listings", listingRouter);
 app.use("/listings/:id/reviews", reviewRouter);
 app.use("/", userRouter);
 
-app.get("/", (req, res) => {
-    res.send("HI I am root");
-});
+
 
 app.all("*", (req, res, next) => {
     next(new ExpressError(404, "PAGE NOT FOUND"));
