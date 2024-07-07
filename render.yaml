@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: wanderlust
+    env: node
+    buildCommand: npm install --legacy-peer-deps
+    startCommand: npm start
